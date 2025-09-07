@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Benchmark class
  */
-public class Benchmark {
+public class BenchmarkCreate {
     /**
      * Benchmark of platform threads
      * @param label Label for the benchmark
@@ -45,8 +45,9 @@ public class Benchmark {
 
         List<Thread> workers = new ArrayList<>();
         for (int i = 0; i < numThreads; i++) {
-            Thread vt = Thread.ofVirtual().name( "Thread VT" + (i+1)).start(task);
+            Thread vt = Thread.ofVirtual().name( "Thread VT" + (i+1)).unstarted(task);
             workers.add(vt);
+            vt.start();
         }
 
         for (Thread vt : workers) {
