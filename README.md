@@ -3,7 +3,6 @@
 [![Java](https://img.shields.io/badge/Java-11%2B-orange?logo=java)](https://www.oracle.com/java/technologies/javase-downloads.html)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Build](https://img.shields.io/badge/build-manual-lightgrey)
-[![Docs](https://img.shields.io/badge/docs-Javadoc-green)](./doc/index.html)
 
 This benchmark measures the performance of creating platform and virtual threads in Java. The goal is to demonstrate that creating virtual threads is more efficient than creating platform threads, and that this process is not limited by the operating system's capacity.
 
