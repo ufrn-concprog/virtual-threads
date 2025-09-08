@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Build](https://img.shields.io/badge/build-manual-lightgrey)
 
-This benchmark measures the performance of creating platform and virtual threads in Java. The goal is to demonstrate that creating virtual threads is more efficient than creating platform threads, and that this process is not limited by the operating system's capacity.
+This benchmark measures the performance of creating platform and virtual threads in Java. The goal is to demonstrate that creating virtual threads is more efficient than creating platform threads and that this process is not limited by the operating system's capacity.
 
 This project is part of the **Concurrent Programming** module at the [Federal University of Rio Grande do Norte (UFRN)](https://www.ufrn.br), Natal, Brazil.
 
@@ -12,8 +12,8 @@ This project is part of the **Concurrent Programming** module at the [Federal Un
 
 This benchmark comprises two parts:
 
-1. **Measurement of the overhead in terms of time to create 1,000 platform and virtual threads.** This number is currently fixed and hard-coded, but it can be adjusted or even provided as an input to the program. All the threads execute the very same task, which does almost nothing to allow for focusing on the overhead. The benchmark currently runs for only one, so that future work involves modifying the implementation to support multiple runs (at least 20) for empirical validity, and recording the mean and standard deviation.
-2. **Exploration of how many platform and virtual threads can be created subject to the available computing resources.** This assessment is continually executed by increasing the number of threads to create with a 500-unit step (i.e., 500, 1,000, 1,500, and so on) until a [`java.lang.OutOfMemoryError`](https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/OutOfMemoryError.html) exception is raised indicated that the JVM exceeded memory limits.
+1. **Measurement of the overhead in terms of time to create 1,000 platform and virtual threads.** This number is currently fixed and hard-coded, but it can be adjusted or provided as input to the program. All the threads execute the very same task, which does almost nothing to allow for focusing on the overhead. The benchmark currently runs for only one, so future work involves modifying the implementation to support multiple runs (at least 20) for empirical validity and recording the mean and standard deviation.
+2. **Exploration of how many platform and virtual threads can be created subject to the available computing resources.** This assessment is continually executed by increasing the number of threads to create with a 500-unit step (i.e., 500, 1,000, 1,500, and so on) until a [`java.lang.OutOfMemoryError`](https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/OutOfMemoryError.html) exception is raised, indicating that the JVM exceeded memory limits.
 
 ---
 
